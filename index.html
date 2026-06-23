@@ -1,24 +1,48 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>A Very Simple Battleship Game</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
-    
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Battleship</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
 
-            <h1>Battleship</h1>	
+	<h1>Battleship</h1>
 
+	<!-- This line tells the player what to do right now -->
+	<p id="instructions">Arrange your ships, then start the battle.</p>
 
-            <p>Click the board to fire at a ship. Try to sink every battleship!</p>
+	<!-- A short message that changes as you play -->
+	<p id="status"></p>
 
-            <div id="gameboard"></div>
-            
-            
-            <div id="gameboard2"> </div>
+	<!-- The two grids sit side by side -->
+	<div class="boards">
 
-        
-        
+		<div class="panel">
+			<h2>Your fleet</h2>
+			<div id="player-board" class="board"></div>
+			<pre id="player-fleet" class="fleet"></pre>
+		</div>
+
+		<div class="panel">
+			<h2>Enemy waters</h2>
+			<div id="enemy-board" class="board"></div>
+			<pre id="enemy-fleet" class="fleet"></pre>
+		</div>
+
+	</div>
+
+	<!-- The buttons. JavaScript shows or hides them depending on the phase -->
+	<div class="buttons">
+		<button id="rotate-btn">Rotate</button>
+		<button id="random-btn">Place randomly</button>
+		<button id="reset-btn">Reset</button>
+		<button id="start-btn">Start battle</button>
+		<button id="newgame-btn">New game</button>
+	</div>
+
 	<script type="text/javascript" src="sandbox.js"></script>
-	</body>
+
+</body>
 </html>
